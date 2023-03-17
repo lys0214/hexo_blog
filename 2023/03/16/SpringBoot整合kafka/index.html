@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/hexo_blog/img/fluid.png">
+  <link rel="icon" href="/hexo_blog/img/fluid.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="简单整理下Springboot整合Kafka的步骤，并实现简单的案例  1、创建Springboot项目 直接模板创建，或者先创建maven项目，然后改造成Springboot项目，这里不再演示这个 2、引入依赖包 1234&lt;dependency&gt;    &lt;groupId&gt;org.springframework.kafka&lt;&#x2F;groupId&gt;    &lt;a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Springboot整合Kafka步骤">
-<meta property="og:url" content="http://liyansheng_blog.com/2023/03/16/SpringBoot%E6%95%B4%E5%90%88kafka/index.html">
+<meta property="og:url" content="https://lys0214.github.io/hexo_blog/2023/03/16/SpringBoot%E6%95%B4%E5%90%88kafka/index.html">
 <meta property="og:site_name" content="我的Hexo博客">
 <meta property="og:description" content="简单整理下Springboot整合Kafka的步骤，并实现简单的案例  1、创建Springboot项目 直接模板创建，或者先创建maven项目，然后改造成Springboot项目，这里不再演示这个 2、引入依赖包 1234&lt;dependency&gt;    &lt;groupId&gt;org.springframework.kafka&lt;&#x2F;groupId&gt;    &lt;a">
 <meta property="og:locale" content="zh_CN">
@@ -58,12 +58,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="/hexo_blog/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/hexo_blog/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/hexo_blog/css/highlight-dark.css" />
   
 
 
@@ -72,15 +72,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"liyansheng_blog.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"lys0214.github.io","root":"/hexo_blog/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/hexo_blog/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="/hexo_blog/js/utils.js" ></script>
+  <script  src="/hexo_blog/js/color-schema.js" ></script>
   
 
 
@@ -97,7 +97,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/hexo_blog/">
       <strong>程序员小李</strong>
     </a>
 
@@ -116,7 +116,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/hexo_blog/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -128,7 +128,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/hexo_blog/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -140,7 +140,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/hexo_blog/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -152,7 +152,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/hexo_blog/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -164,7 +164,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/hexo_blog/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -176,7 +176,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/hexo_blog/links/">
                 <i class="iconfont icon-link-fill"></i>
                 <span>友链</span>
               </a>
@@ -206,7 +206,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/hexo_blog/img/default.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -304,7 +304,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> org.lys;<br><span class="hljs-keyword">import</span> org.apache.kafka.clients.consumer.ConsumerRecord;<br><span class="hljs-keyword">import</span> org.junit.Test;<br><span class="hljs-keyword">import</span> org.junit.runner.RunWith;<br><span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;<br><span class="hljs-keyword">import</span> org.springframework.boot.test.context.SpringBootTest;<br><span class="hljs-keyword">import</span> org.springframework.kafka.annotation.KafkaListener;<br><span class="hljs-keyword">import</span> org.springframework.kafka.core.KafkaTemplate;<br><span class="hljs-keyword">import</span> org.springframework.stereotype.Component;<br><span class="hljs-keyword">import</span> org.springframework.test.context.ContextConfiguration;<br><span class="hljs-keyword">import</span> org.springframework.test.context.junit4.SpringRunner;<br><br><span class="hljs-meta">@RunWith(SpringRunner.class)</span><br><span class="hljs-meta">@SpringBootTest</span><br><span class="hljs-meta">@ContextConfiguration(classes = DiyApplication.class)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">KafkaTests</span> &#123;<br><br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> KafkaProducer kafkaProducer;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testKafka</span><span class="hljs-params">()</span>&#123;<br>        <span class="hljs-comment">// 参数1：主题，参数2：信息</span><br>        kafkaProducer.sendMessage(<span class="hljs-string">&quot;test&quot;</span>,<span class="hljs-string">&quot;你好&quot;</span>);<br>        kafkaProducer.sendMessage(<span class="hljs-string">&quot;test&quot;</span>,<span class="hljs-string">&quot;在么&quot;</span>);<br>        <span class="hljs-keyword">try</span> &#123;<br>            Thread.sleep(<span class="hljs-number">1000</span>*<span class="hljs-number">10</span>);<br>        &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>            e.printStackTrace();<br>        &#125;<br><br>    &#125;<br><br>&#125;<br><br><span class="hljs-meta">@Component</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">KafkaProducer</span>&#123;<br><br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> KafkaTemplate kafkaTemplate;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">sendMessage</span><span class="hljs-params">(String topic,String content)</span>&#123;<br>        kafkaTemplate.send(topic,content);<br>    &#125;<br><br>&#125;<br><br><span class="hljs-meta">@Component</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">KafkaConsumer</span>&#123;<br>    <span class="hljs-comment">// 当收到信息，自动执行这个方法</span><br>    <span class="hljs-meta">@KafkaListener(topics = &#123;&quot;test&quot;&#125;)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">handleMessage</span><span class="hljs-params">(ConsumerRecord record)</span>&#123;<br>        System.out.println(record.value());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>5、结果</p>
-<p><img src="http://liyansheng.top/typora/image-20230226184626286.png" srcset="/img/loading.gif" lazyload alt="image-20230226184626286"></p>
+<p><img src="http://liyansheng.top/typora/image-20230226184626286.png" srcset="/hexo_blog/img/loading.gif" lazyload alt="image-20230226184626286"></p>
 <p>可能出现的问题连上服务器：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/qianxiaoPro/p/15788854.html">Kafka client 客户端远程连接 一直报网络错误问题 - 浅笑19 - 博客园 (cnblogs.com)</a></p>
 
                 
@@ -324,12 +324,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%90%8E%E7%AB%AF/" class="category-chain-item">后端</a>
+  <a href="/hexo_blog/categories/%E5%90%8E%E7%AB%AF/" class="category-chain-item">后端</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%90%8E%E7%AB%AF/%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="category-chain-item">中间件</a>
+  <a href="/hexo_blog/categories/%E5%90%8E%E7%AB%AF/%E4%B8%AD%E9%97%B4%E4%BB%B6/" class="category-chain-item">中间件</a>
   
   
 
@@ -346,9 +346,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/kafka/">#kafka</a>
+        <a href="/hexo_blog/tags/kafka/">#kafka</a>
       
-        <a href="/tags/SpringBoot/">#SpringBoot</a>
+        <a href="/hexo_blog/tags/SpringBoot/">#SpringBoot</a>
       
     </div>
   
@@ -361,7 +361,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Springboot整合Kafka步骤</div>
-      <div>http://liyansheng_blog.com/2023/03/16/SpringBoot整合kafka/</div>
+      <div>https://lys0214.github.io/hexo_blog/2023/03/16/SpringBoot整合kafka/</div>
     </div>
     <div class="license-meta">
       
@@ -405,9 +405,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/03/16/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8Hexo/" title="第一次使用Hexo">
+                      <a href="/hexo_blog/2023/03/17/GPG%E5%85%AC%E9%92%A5%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" title="GPG公钥生成问题-解决(Linux)">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第一次使用Hexo</span>
+                        <span class="hidden-mobile">GPG公钥生成问题-解决(Linux)</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -415,8 +415,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/03/16/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/hexo_blog/2023/03/16/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8Hexo/" title="第一次使用Hexo">
+                        <span class="hidden-mobile">第一次使用Hexo</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -436,8 +436,8 @@
     
       <script type="text/javascript">
         var disqus_config = function() {
-          this.page.url = 'http://liyansheng_blog.com/2023/03/16/SpringBoot%E6%95%B4%E5%90%88kafka/';
-          this.page.identifier = '/2023/03/16/SpringBoot%E6%95%B4%E5%90%88kafka/';
+          this.page.url = 'https://lys0214.github.io/hexo_blog/2023/03/16/SpringBoot%E6%95%B4%E5%90%88kafka/';
+          this.page.identifier = '/hexo_blog/2023/03/16/SpringBoot%E6%95%B4%E5%90%88kafka/';
         };
         Fluid.utils.loadComments('#disqus_thread', function() {
           var d = document, s = d.createElement('script');
@@ -573,8 +573,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="/hexo_blog/js/events.js" ></script>
+<script  src="/hexo_blog/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -596,7 +596,7 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="/hexo_blog/js/img-lazyload.js" ></script>
   
 
 
@@ -695,7 +695,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="/hexo_blog/js/local-search.js" ></script>
 
 
 
@@ -703,7 +703,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="/hexo_blog/js/boot.js" ></script>
 
 
   
